@@ -1,7 +1,3 @@
-
-
-
-
 function computerPlay() {
     let rand_num = Math.floor(Math.random() * 100);
     
