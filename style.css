@@ -1,0 +1,39 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.game-title {
+    display: flex;
+    justify-content: center;
+}
+
+.selection-areas {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.display-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-area {
+    text-align: center;
+}
+
+.game-display {
+    text-align: center;
+}
+
+.game,
+.selection-areas,
+.display-box,
+.game-title {
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+}
