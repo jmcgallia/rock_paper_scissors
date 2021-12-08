@@ -78,10 +78,10 @@ startButton.addEventListener('click', function() {
     if (gameState === 'not started') {
         removeScales();
         gameState = 'playing';
-        this.innerHTML = "Please pick rock, paper, or scissors.";
-        document.querySelector(".game-display").innerHTML = 'Pick a weapon!'
-        document.querySelector(".player-score-box").innerHTML = '0';
-        document.querySelector(".ai-score-box").innerHTML = '0';
+        this.innerHTML = "<p>..game in process..</p>";
+        document.querySelector(".game-display").innerHTML = '<p>Pick a weapon!</p>';
+        document.querySelector(".player-score-box").innerHTML = '<p>0</p>';
+        document.querySelector(".ai-score-box").innerHTML = '<p>0</p>';
 
     }
 })
@@ -116,15 +116,15 @@ function playGame(weapon) {
         round += 1;
         roundResult = playRound(weapon, computerMove);
 
-        document.querySelector(".player-score-box").innerHTML = rounds_won.toString();
-        document.querySelector(".ai-score-box").innerHTML = rounds_lost.toString();
+        document.querySelector(".player-score-box").innerHTML = `<p>${rounds_won.toString()}</p>`;
+        document.querySelector(".ai-score-box").innerHTML = `<p>${rounds_lost.toString()}</p>`;
 
         if (round == 5) {
             // Reset play button
             startButton.innerHTML = "PLAY AGAIN";
             
             // Logic to display winner
-            document.querySelector(".game-display").innerHTML = `Round ${round}: ${roundResult} \n ${gameResult(rounds_lost, rounds_won)}`;
+            document.querySelector(".game-display").innerHTML = `<p>Round ${round}: ${roundResult} \n ${gameResult(rounds_lost, rounds_won)}</p>`;
 
             // Reset Game State
             round = 0;
@@ -135,7 +135,7 @@ function playGame(weapon) {
             return;
         }
 
-        document.querySelector(".game-display").innerHTML = `Round ${round}: ${roundResult}`;
+        document.querySelector(".game-display").innerHTML = `<p>Round ${round}: ${roundResult}</p>`;
 
     }
 };
