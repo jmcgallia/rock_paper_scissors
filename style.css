@@ -12,8 +12,40 @@
 .selection-areas {
     display: flex;
     justify-content: space-around;
-
+    flex-wrap: wrap;
+    padding: 10px;
 }
+
+.player-title h1 {
+    text-align: center;
+}
+
+.player-box,
+.ai-box {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+}
+
+
+.selection-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.selection-area div,
+.player-choice-box,
+.ai-choice-box {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
 
 .display-box {
     display: flex;
@@ -28,10 +60,30 @@
     text-align: center;
 }
 
+.selection-area div img {
+    max-height: 200px;
+    width: auto;
+    min-height: 100px;
+}
+
+.main-display-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .game,
 .selection-areas,
 .display-box,
-.game-title {
+.game-title,
+.selection-area div,
+.selection-area div img,
+.player-box,
+.ai-box,
+.player-choice-box,
+.ai-choice-box,
+.player-choice-box img,
+.ai-choice-box img {
     border-style: solid;
     border-width: 2px;
     border-color: black;

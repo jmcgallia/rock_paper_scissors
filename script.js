@@ -1,3 +1,12 @@
+/* ***********
+Game Logic 
+***************/
+
+/* To do:
+Find alternative to innerHTML
+Make document prettier - alignment of buttons - Better pictures
+Add some kind of intro / story */
+
 function computerPlay() {
     let rand_num = Math.floor(Math.random() * 100);
     
@@ -81,4 +90,41 @@ function game() {
 
 }
 
-// game();
+/* Get elements */
+startButton = document.querySelector("#start-button");
+rockButton = document.querySelector(".player-box .rock-box button");
+paperButton = document.querySelector(".player-box .paper-box button");
+scissorsButton = document.querySelector(".player-box .scissor-box button");
+
+/* Add event listeners */
+rockButton.addEventListener('click', () => playGame('rock'));
+paperButton.addEventListener('click', () => playGame('paper'));
+scissorsButton.addEventListener('click', () => playGame('scissor'));
+
+/* Global Variables */
+let gameState = 'not started';
+let round = 0;
+let rounds_won = 0;
+let rounds_lost = 0;
+
+
+
+startButton.addEventListener('click', function() {
+    if (gameState === 'not started') {
+        gameState = 'playing';
+        this.innerHTML = "Please pick rock, paper, or scissors.";
+    }
+})
+
+
+
+
+
+function playGame(weapon) {
+    console.log(weapon);
+    if (gameState === 'playing') {
+        round += 1;
+        computer_move = computerPlay();
+        console.log(playRound(weapon, computer_move));
+    }
+};

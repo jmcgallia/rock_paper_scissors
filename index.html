@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
             </div>
             <div class="ai-box">
                 <div class="player-title"><h1>Computer</h1></div>
-                <div class="selection-area">
+                <div class="selection-area" id="ai-selection-area">
                     <div class="rock-box">
                         <img src="img/rock.png" alt="">
                         <button class="rock-button">Rock</button>
@@ -48,8 +48,19 @@
             </div>
         </div>
         <div class="display-box">
-            <div class="title-area"><h1>PLAY</h1></div>
-            <div class="game-display"><p>Game Information</p></div>
+            <div class="title-area"><button id="start-button">PLAY</button></div>
+            <div class="main-display-area">
+                <div class="player-choice-box">
+                    <img src="img/mystery.png" alt="">
+                    <button class="scissors-button">Scissors</button>
+                </div>
+                <div class="game-display"><p>Game Information</p></div>
+                <div class="ai-choice-box">
+                    <img src="img/mystery.png" alt="">
+                    <button class="scissors-button">Scissors</button>
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>
