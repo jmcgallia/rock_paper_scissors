@@ -15,15 +15,15 @@
             <div class="player-box">      
                 <div class="player-title"><h1>Human</h1></div>
                 <div class="selection-area">
-                    <div class="rock-box">
+                    <div data-humanWeapon='rock' class="rock-box">
                         <img src="img/rock.png" alt="A drawing of a grey rock.">
                         <button class="rock-button">Rock</button>
                     </div>
-                    <div class="paper-box">
+                    <div data-humanWeapon='paper' class="paper-box">
                         <img src="img/paper.png" alt="A drawing of a white piece of paper.">
                         <button class="paper-button">Paper</button>
                     </div>
-                    <div class="scissor-box">
+                    <div data-humanWeapon='scissors' class="scissor-box">
                         <img src="img/scissors.png" alt="A drawing of a pair of scissors">
                         <button class="scissors-button">Scissors</button>
                     </div>
@@ -32,15 +32,15 @@
             <div class="ai-box">
                 <div class="player-title"><h1>Computer</h1></div>
                 <div class="selection-area" id="ai-selection-area">
-                    <div class="rock-box">
+                    <div data-weapon="rock" class="rock-box">
                         <img src="img/rock.png" alt="">
                         <button class="rock-button">Rock</button>
                     </div>
-                    <div class="paper-box">
+                    <div data-weapon="paper" class="paper-box">
                         <img src="img/paper.png" alt="">
                         <button class="paper-button">Paper</button>
                     </div>
-                    <div class="scissor-box">
+                    <div data-weapon="scissors" class="scissor-box">
                         <img src="img/scissors.png" alt="">
                         <button class="scissors-button">Scissors</button>
                     </div>
@@ -50,14 +50,12 @@
         <div class="display-box">
             <div class="title-area"><button id="start-button">PLAY</button></div>
             <div class="main-display-area">
-                <div class="player-choice-box">
-                    <img src="img/mystery.png" alt="">
-                    <button class="scissors-button">Scissors</button>
+                <div class="player-score-box">
+                    <p>0</p>
                 </div>
                 <div class="game-display"><p>Game Information</p></div>
-                <div class="ai-choice-box">
-                    <img src="img/mystery.png" alt="">
-                    <button class="scissors-button">Scissors</button>
+                <div class="ai-score-box">
+                    <p>0</p>
                 </div>
             </div>
             

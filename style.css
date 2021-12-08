@@ -28,6 +28,11 @@
     padding: 10px;
 }
 
+.scaled {
+    transform: scale(1.1);
+    background-color: black;
+}
+
 
 .selection-area {
     display: flex;
@@ -38,12 +43,11 @@
 }
 
 
-.selection-area div,
-.player-choice-box,
-.ai-choice-box {
+.selection-area div {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    transition: all 1s ease;
 }
 
 
@@ -79,11 +83,8 @@
 .selection-area div,
 .selection-area div img,
 .player-box,
-.ai-box,
-.player-choice-box,
-.ai-choice-box,
-.player-choice-box img,
-.ai-choice-box img {
+.ai-box
+{
     border-style: solid;
     border-width: 2px;
     border-color: black;
