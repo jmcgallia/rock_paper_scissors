@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 10px;
     gap: 10px;
-    height: 100vh;
 }
 .game-title {
     display: flex;
@@ -84,7 +83,7 @@
     width: 300px;
     height: 100px;
     border-radius: 5px;
-    background-color: blue;
+    background-color: rgb(199, 196, 196);
     font-size: 25px;
 }
 
@@ -111,17 +110,43 @@
     align-items: center;
 }
 
-.game,
 .selection-areas,
-.display-box,
 .game-title,
 .selection-area div,
 .selection-area div img,
-.player-box,
-.ai-box
+.player-score-box,
+.ai-score-box,
+.game-display
 {
     border-style: solid;
     border-width: 2px;
     border-color: black;
     border-radius: 5px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.player-box .selection-area div,
+.player-score-box {
+    background-color: lightskyblue;
+}
+
+.ai-box .selection-area div,
+.ai-score-box {
+    background-color: maroon;
+}
+
+.game-title,
+.selection-areas,
+.game-display {
+    background-color: rgb(199, 196, 196);
+}
+
+.selection-area button {
+    border-radius: 5px;
+    background-color: honeydew;
+    margin-top: 5px;
+    height: 25px;
 }
